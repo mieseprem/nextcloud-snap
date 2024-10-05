@@ -58,6 +58,10 @@ apps:
     restart-condition: always
     plugs: [network, network-bind]
 
+  redis-client:
+    command: bin/run-redis
+    plugs: [network, network-bind]
+
   # MySQL client
   mysql-client:
     command: bin/run-mysql
